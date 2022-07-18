@@ -46,5 +46,20 @@ public class PiceFowwedScripts : MonoBehaviour
         state = Upwalk;
         this.transform.Translate(0,speed*Time.deltaTime,0);
        }
+       if(Input.GetKey(KeyCode.A))
+       {
+        state = LeftWalk;
+        this.transform.Translate(-speed*Time.deltaTime,0,0);
+       }
+       if(Input.GetKey(KeyCode.S))
+       {
+         state = DownWalk;
+         this.transform.Translate(0,-speed*Time.deltaTime,0);
+       }
+       if(Input.GetKey(KeyCode.D))
+       {
+         state = RightWalk;
+         this.transform.Translate(speed*Time.deltaTime,0,0);
+       }
     }
 }
