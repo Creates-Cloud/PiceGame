@@ -11,6 +11,10 @@ public class PiceFowwedScripts : MonoBehaviour
     public int state = 2;
     private float speed = 3;
     // Update is called once per frame
+    void Start()
+    {
+       move();
+    }
     void Update()
     {
         Inputkey();
@@ -61,5 +65,9 @@ public class PiceFowwedScripts : MonoBehaviour
          state = RightWalk;
          this.transform.Translate(speed*Time.deltaTime,0,0);
        }
+    }
+    public void move()
+    {
+
     }
 }
